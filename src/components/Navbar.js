@@ -8,13 +8,13 @@ export default function Navbar() {
       <Menu inverted>
         <Container>
           <Link to='/'>
-            <Menu.Item name='Star Wars'></Menu.Item>
+            <Menu.Item name='Star Wars' />
           </Link>
           <Link to='/People'>
-            <Menu.Item name='People'></Menu.Item>
+            <Menu.Item name='People' />
           </Link>
           <Link to='/Planets'>
-            <Menu.Item name='Planets'></Menu.Item>
+            <Menu.Item name='Planets' />
           </Link>
         </Container>
       </Menu>
