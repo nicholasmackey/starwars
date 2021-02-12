@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './components/Home'
+import People from './components/People'
+import Planets from './components/Planets'
+import { Menu, Container } from 'semantic-ui-react'
 
 function App() {
 
@@ -29,6 +33,19 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
+        <Container>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/People'>
+              <People />
+            </Route>
+            <Route exact path='/Planets'>
+              <Planets />
+            </Route>
+          </Switch>
+        </Container>
       </Router>
     </div>
   );
