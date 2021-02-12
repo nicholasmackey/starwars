@@ -7,7 +7,7 @@ This repo is a project that I am continuing to build upon.
 ## Getting Started with Star Wars App
 
 Clone the repository
-`git clone https://github.com/nikmackey/starwars.git`
+#### `git clone https://github.com/nikmackey/starwars.git`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-`npm run start`
+#### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
