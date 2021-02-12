@@ -30,7 +30,7 @@ function App() {
   }, [])  
 
   return (
-    <div className="App">
+    <>
       <Router>
         <Navbar />
         <Container>
@@ -47,7 +47,7 @@ function App() {
           </Switch>
         </Container>
       </Router>
-    </div>
+    </>
   );
 }
 
