@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './components/Home'
+import People from './components/People'
+import Planets from './components/Planets'
+import { Container, Dimmer, Loader } from 'semantic-ui-react'
 
 function App() {
 
@@ -23,14 +27,34 @@ function App() {
     
     fetchPeople()
     fetchPlanets()
+    setLoading(false)
   }, [])  
 
   return (
-    <div className="App">
+    <>
       <Router>
         <Navbar />
+        <Container>
+          { loading ? (
+            <Dimmer active inverted>
+              <Loader inverted>Loading</Loader>
+            </Dimmer>
+          ) : (
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/People'>
+              <People data={people} />
+            </Route>
+            <Route exact path='/Planets'>
+              <Planets data={planets} />
+            </Route>
+          </Switch>
+          ) }
+        </Container>
       </Router>
-    </div>
+    </>
   );
 }
 
