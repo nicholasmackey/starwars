@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
 
@@ -26,7 +27,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Router>
+        <Navbar />
+      </Router>
     </div>
   );
 }
