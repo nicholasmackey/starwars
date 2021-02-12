@@ -45,10 +45,10 @@ function App() {
               <Home />
             </Route>
             <Route exact path='/People'>
-              <People />
+              <People data={people} />
             </Route>
             <Route exact path='/Planets'>
-              <Planets />
+              <Planets data={planets} />
             </Route>
           </Switch>
           ) }
