@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import People from './components/People'
 import Planets from './components/Planets'
-import { Menu, Container } from 'semantic-ui-react'
+import { Container, Dimmer, Loader } from 'semantic-ui-react'
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
     
     fetchPeople()
     fetchPlanets()
+    setLoading(false)
   }, [])  
 
   return (
@@ -34,6 +35,11 @@ function App() {
       <Router>
         <Navbar />
         <Container>
+          { loading ? (
+            <Dimmer active inverted>
+              <Loader inverted>Loading</Loader>
+            </Dimmer>
+          ) : (
           <Switch>
             <Route exact path='/'>
               <Home />
@@ -45,6 +51,7 @@ function App() {
               <Planets />
             </Route>
           </Switch>
+          ) }
         </Container>
       </Router>
     </>
